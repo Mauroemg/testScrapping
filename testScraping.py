@@ -76,7 +76,7 @@ driver.quit()
 
 
 
-#
+
 # urls = []
 # for element in elements:
 #     try:

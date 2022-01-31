@@ -34,7 +34,7 @@ path_driver = 'C:/Users/Admin/scrappers/chromedriver.exe'
 chrome_options = Options()
 #chrome_options.add_argument("--headless")
 
-
+#
 # Creación del navegador
 driver = webdriver.Chrome(executable_path = path_driver, options = chrome_options)
 
