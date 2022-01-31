@@ -24,7 +24,7 @@ from selenium.webdriver.common.by import By
 
 #soup.prettify
 
-
+#
 #elements = soup.find_all(attrs = {"class": "on-hover metadata-items"})
 #print(elements)
 
