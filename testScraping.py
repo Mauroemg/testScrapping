@@ -11,10 +11,10 @@ import time
 # pagina = requests.get(url_Peliculas)
 
 
-#url = 'https://www.starz.com/ar/es/movies' # La url que nos muestra muchos deptos
+#url = 'https://www.starz.com/ar/es/movies' # 
 #search = requests.get(url) # Hacemos el request a la página para acceder a la misma
 
-#print(f'El status es: {search.status_code}') # Chequeamos que haya salido todo bien
+#print(f'El status es: {search.status_code}') # 
 
 #print(search.content)
 
@@ -42,7 +42,7 @@ driver = webdriver.Chrome(executable_path = path_driver, options = chrome_option
 driver.get("https://www.starz.com/ar/es/movies")
 time.sleep(5)
 
-elements = driver.find_elements_by_class_name("view-all")
+elements = driver.find_elements_by_class_name("slider-title text-uppercase")
 
 for iteration in range(6):
     driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
@@ -57,6 +57,9 @@ for element in elements:
         hrefs.append(href)
     except:
         pass
+print(hrefs)
+
+
 
 # # Guardamos los enlaces en un archivo
 # fp = open('links.txt','w')
@@ -64,8 +67,7 @@ for element in elements:
 # 	fp.write(href + '\n')
 # fp.close()
 
-# # Finalmente cerramos todas las sesiones de navegación que abrimos. 
-# # Son necesarias ambas líneas (una cierra la pestaña, la otra toda el navegador)
+
 
 driver.close()
 driver.quit()
@@ -87,7 +89,7 @@ driver.quit()
 # print(len(urls))
 
 # search_parseada = bs(search.content, 'html.parser') # Parseamos el contenido del request como un html
-# print(search_parseada.prettify()[:20000]) # Printeamos los primeros n caracteres para ver qué onda
+# print(search_parseada.prettify()[:20000]) #
 
 
 # tag_deptos = search_parseada.findAll(name = 'div', attrs = {'class' : 'listing__item'})

@@ -13,10 +13,9 @@ from selenium.webdriver.common.by import By
 # pagina = requests.get(url_Peliculas)
 
 
-#url = 'https://www.starz.com/ar/es/movies' # La url que nos muestra muchos deptos
-#search = requests.get(url) # Hacemos el request a la página para acceder a la misma
-
-#print(f'El status es: {search.status_code}') # Chequeamos que haya salido todo bien
+#url = 'https://www.starz.com/ar/es/movies' #
+#search = requests.get(url) #
+#print(f'El status es: {search.status_code}')
 
 #print(search.content)
 
@@ -70,8 +69,6 @@ print(hrefs)
 # 	fp.write(href + '\n')
 # fp.close()
 
-# # Finalmente cerramos todas las sesiones de navegación que abrimos. 
-# # Son necesarias ambas líneas (una cierra la pestaña, la otra toda el navegador)
 
 driver.close()
 driver.quit()
@@ -93,7 +90,7 @@ driver.quit()
 # print(len(urls))
 
 # search_parseada = bs(search.content, 'html.parser') # Parseamos el contenido del request como un html
-# print(search_parseada.prettify()[:20000]) # Printeamos los primeros n caracteres para ver qué onda
+# print(search_parseada.prettify()[:20000]) 
 
 
 # tag_deptos = search_parseada.findAll(name = 'div', attrs = {'class' : 'listing__item'})
